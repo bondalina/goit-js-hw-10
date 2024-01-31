@@ -19,6 +19,7 @@ const datetimePicker = document.getElementById('datetime-picker');
 let countdownInterval;
 let userSelectedDate;
 
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -49,6 +50,7 @@ const flatpickrInstance = flatpickr("#datetime-picker", options);
 
 function startCountdown() {
   startButton.disabled = true;
+  datetimePicker.disabled = true;
 
   const targetDate = userSelectedDate.getTime();
 
@@ -63,6 +65,7 @@ function startCountdown() {
       minutesElement.textContent = '00';
       secondsElement.textContent = '00';
       startButton.disabled = true;
+      datetimePicker.disabled = false;
       return;
     }
 

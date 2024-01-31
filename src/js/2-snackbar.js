@@ -36,6 +36,7 @@ function handleSubmit(event) {
     (delay) => {
       iziToast.success({
         title: 'Success',
+        position: "topRight",
         message: `✅ Fulfilled promise in ${delay}ms`,
       });
     },
@@ -43,6 +44,7 @@ function handleSubmit(event) {
     (delay) => {
       iziToast.error({
         title: 'Error',
+        position: "topRight",
         message: `❌ Rejected promise in ${delay}ms`,
       });
     }
